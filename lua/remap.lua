@@ -1,7 +1,19 @@
 local utils = require('utils')
 
--- Remaps
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.colorcolumn = "120"
+vim.opt.wrap = false
+vim.opt.wrapmargin = 0
+
+-- Set relative number
+vim.opt.relativenumber = true
 vim.g.mapleader = ' '
+
+vim.opt.scrolloff = 10
+
+-- Remaps
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
@@ -38,9 +50,6 @@ vim.keymap.set("n", "<leader>t", function()
 end)
 
 -- Custom Configs
-
-vim.cmd("set scrolloff=10")
-
 vim.api.nvim_create_autocmd('TextYankPost', {
 	group = vim.api.nvim_create_augroup('highlight_yank', {}),
 	desc = 'Hightlight selection on yank',

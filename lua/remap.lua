@@ -49,6 +49,13 @@ vim.keymap.set("n", "<leader>t", function()
 	vim.cmd("startinsert")
 end)
 
+-- Split the terminal horizontally and focus it
+vim.keymap.set("n", "<leader>rt", function()
+	vim.cmd("bel vsplit")
+	vim.cmd("term")
+	vim.cmd("startinsert")
+end)
+
 -- Custom Configs
 vim.api.nvim_create_autocmd('TextYankPost', {
 	group = vim.api.nvim_create_augroup('highlight_yank', {}),

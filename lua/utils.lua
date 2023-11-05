@@ -1,5 +1,3 @@
-local M = {}
-
 ---@param cond boolean
 ---@param v1 any
 ---@param v2 any

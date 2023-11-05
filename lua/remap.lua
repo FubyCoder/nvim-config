@@ -23,17 +23,16 @@ vim.keymap.set("n", "<leader>t", function()
 	local is_nvim_tree = string.find(vim.api.nvim_buf_get_name(0), "NvimTree") ~= nil
 	local split_command = utils.ternary(is_nvim_tree, "bel vsplit", "bel split")
 
-
 	vim.cmd(split_command)
 	vim.cmd("term")
 	vim.cmd("startinsert")
 
 	-- Workaround to resize nvim-tree if was the main element
-	if is_nvim_tree then
-		local api = require('nvim-tree.api')
-		api.tree.toggle()
-		api.tree.toggle()
-	end
+	--	if is_nvim_tree then
+	--		local api = require('nvim-tree.api')
+	--		api.tree.toggle()
+	--		api.tree.toggle()
+	--	end
 end)
 
 -- Custom Configs

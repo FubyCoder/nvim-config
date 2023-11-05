@@ -13,6 +13,8 @@ end)
 
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
 
+-- From terminal mode -> normal mode using Esc button
+vim.keymap.set('t', '<ESC>', "<C-\\><C-n>")
 -- Custom Configs
 
 vim.cmd("set scrolloff=10")

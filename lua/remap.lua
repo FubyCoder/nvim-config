@@ -18,11 +18,11 @@ vim.opt.scrolloff = 10
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 vim.keymap.set('n', '<leader>k', function()
-	vim.cmd('m -2')
+	pcall(vim.cmd, 'm -2')
 end)
 
 vim.keymap.set('n', '<leader>j', function()
-	vim.cmd('m +1')
+	pcall(vim.cmd, 'm +1')
 end)
 
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)

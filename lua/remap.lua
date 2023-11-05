@@ -14,6 +14,9 @@ end)
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
 
 -- Custom Configs
+
+vim.cmd("set scrolloff=10")
+
 vim.api.nvim_create_autocmd('TextYankPost', {
 	group = vim.api.nvim_create_augroup('highlight_yank', {}),
 	desc = 'Hightlight selection on yank',

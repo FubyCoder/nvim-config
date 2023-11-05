@@ -15,6 +15,27 @@ vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
 
 -- From terminal mode -> normal mode using Esc button
 vim.keymap.set('t', '<ESC>', "<C-\\><C-n>")
+
+-- Open terminal split
+vim.keymap.set("n", "<leader>t", function()
+	local is_nvim_tree = string.find(vim.api.nvim_buf_get_name(0), "NvimTree")
+
+	if is_nvim_tree then
+		vim.cmd("bel vsplit")
+	else
+		vim.cmd("bel split")
+	end
+	vim.cmd("term")
+	vim.cmd("startinsert")
+
+
+	if is_nvim_tree then
+		local api = require('nvim-tree.api')
+		api.tree.toggle()
+		api.tree.toggle()
+	end
+end)
+
 -- Custom Configs
 
 vim.cmd("set scrolloff=10")

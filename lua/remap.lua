@@ -25,14 +25,16 @@ vim.keymap.set("n", "<leader>t", function()
 
 	vim.cmd(split_command)
 	vim.cmd("term")
-	vim.cmd("startinsert")
 
 	-- Workaround to resize nvim-tree if was the main element
-	--	if is_nvim_tree then
-	--		local api = require('nvim-tree.api')
-	--		api.tree.toggle()
-	--		api.tree.toggle()
-	--	end
+	if is_nvim_tree then
+		local api = require('nvim-tree.api')
+		api.tree.toggle()
+		api.tree.toggle()
+		vim.cmd("bprevious")
+	end
+
+	vim.cmd("startinsert")
 end)
 
 -- Custom Configs

@@ -8,6 +8,9 @@ require("nvim-tree").setup({
 	sync_root_with_cwd = true,
 	respect_buf_cwd = true,
 	disable_netrw = true,
+	view = {
+		width = 40,
+	},
 	renderer = {
 		root_folder_label = false,
 
@@ -36,8 +39,9 @@ require("nvim-tree").setup({
 			git_placement = "before",
 		},
 	},
+
 	filters = {
-		dotfiles = false
+		dotfiles = true,
 	},
 })
 

@@ -14,6 +14,8 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
+	use "olimorris/onedarkpro.nvim"
+
 	use {
 		'nvim-tree/nvim-tree.lua',
 		requires = {
@@ -56,7 +58,6 @@ return require('packer').startup(function(use)
 			{ 'L3MON4D3/LuaSnip' }, -- Required
 		}
 	}
-	use 'navarasu/onedark.nvim'
 
 	use {
 		"williamboman/mason.nvim",

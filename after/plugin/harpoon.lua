@@ -10,18 +10,13 @@ local function move_to_file(page)
 	end)
 end
 
-vim.keymap.set('n', '<C-q>', function()
+vim.keymap.set('n', '<C-r>', function()
 	ui.toggle_quick_menu()
 end, {})
 
 -- Quick Add file
 vim.keymap.set('n', '<leader>qa', function()
 	mark.add_file()
-end, {})
-
--- Quick Remove
-vim.keymap.set('n', '<leader>qr', function()
-	mark.remove_file()
 end, {})
 
 move_to_file(1)

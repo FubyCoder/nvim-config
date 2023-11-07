@@ -13,6 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+
 	use {
 		'nvim-tree/nvim-tree.lua',
 		requires = {
@@ -29,12 +30,10 @@ return require('packer').startup(function(use)
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 
-	-- use({ 'rose-pine/neovim', as = 'rose-pine' })  -- This Color is disabled atm
 	use "lukas-reineke/indent-blankline.nvim"
 	use "nvim-treesitter/nvim-treesitter-context"
 
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-
 	use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true } }
 
 	use {
@@ -57,8 +56,7 @@ return require('packer').startup(function(use)
 			{ 'L3MON4D3/LuaSnip' }, -- Required
 		}
 	}
-
-	use "olimorris/onedarkpro.nvim"
+	use 'navarasu/onedark.nvim'
 
 	use {
 		"williamboman/mason.nvim",

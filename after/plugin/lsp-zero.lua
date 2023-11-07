@@ -18,6 +18,9 @@ lsp.set_sign_icons({
 	info = "»",
 })
 
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+
+
 lsp.setup()
 
 lsp.on_attach(function(client, bufnr)

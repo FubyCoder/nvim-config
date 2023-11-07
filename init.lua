@@ -1,2 +1,4 @@
-require('config')
-require('remap')
+require('package-manager')
+
+require('settings')
+require('keybinds')

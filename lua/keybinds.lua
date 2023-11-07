@@ -19,7 +19,7 @@ end
 
 local function split_terminal()
 	local is_nvim_tree = string.find(vim.api.nvim_buf_get_name(0), "NvimTree") ~= nil
-	local split_command = utils.ternary(is_nvim_tree, "bel vsplit", "bel split")
+	local split_command = utils.ternary(is_nvim_tree, "bel vsplit", "bel 15split")
 
 	vim.cmd(split_command)
 	vim.cmd("term")

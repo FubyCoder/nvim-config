@@ -20,6 +20,7 @@ vim.opt.relativenumber = true
 -- Minimum lines displayed above and below cursor
 vim.opt.scrolloff = 10
 
+-- Highlight current line
 vim.opt.cursorline = true
 
 -- Highlight text on yank (copy)

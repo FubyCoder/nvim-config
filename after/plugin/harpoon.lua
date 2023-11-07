@@ -3,6 +3,7 @@ require("harpoon").setup()
 local ui = require('harpoon.ui')
 local mark = require('harpoon.mark')
 
+
 ---@param page number
 local function move_to_file(page)
 	vim.keymap.set('n', '<leader>' .. page, function()

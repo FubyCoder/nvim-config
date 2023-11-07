@@ -50,6 +50,9 @@ local format_code = vim.lsp.buf.format
 --													   --
 ---------------------------------------------------------
 
+-- Additional rebinds may be in /after/plugin files
+-- Search for /vim.keymap.set using treesitter
+
 
 -- Move up and down the lines selected
 vim.keymap.set('v', 'J', move_block_down)

@@ -13,8 +13,8 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
-
 	use "olimorris/onedarkpro.nvim"
+	use "rebelot/heirline.nvim"
 
 	use {
 		'nvim-tree/nvim-tree.lua',

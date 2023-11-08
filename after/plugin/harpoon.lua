@@ -11,7 +11,7 @@ local function move_to_file(page)
 	end)
 end
 
-vim.keymap.set('n', '<C-r>', function()
+vim.keymap.set('n', '<C-q>', function()
 	ui.toggle_quick_menu()
 end, {})
 

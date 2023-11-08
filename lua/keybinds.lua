@@ -43,7 +43,6 @@ end
 
 local format_code = vim.lsp.buf.format
 
-
 ---------------------------------------------------------
 --													   --
 --						Keybinds					   --

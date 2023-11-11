@@ -1,4 +1,18 @@
-require("telescope").load_extension("harpoon")
+local telescope = require('telescope')
+
+telescope.setup {
+	pickers = {
+		find_files = {
+			hidden = true
+		}
+	},
+	defaults = {
+		file_ignore_patterns = { "node_modules/", ".git/" }
+	}
+}
+
+telescope.load_extension("harpoon")
+
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})

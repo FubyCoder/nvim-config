@@ -17,6 +17,11 @@ return require('packer').startup(function(use)
 	use "rebelot/heirline.nvim"
 
 	use {
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	}
+
+	use {
 		'nvim-tree/nvim-tree.lua',
 		requires = {
 			'nvim-tree/nvim-web-devicons', -- optional

@@ -40,8 +40,13 @@ require("nvim-tree").setup({
 		},
 	},
 
+	git = {
+		ignore = false
+	},
+
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
+		custom = { ".git$" }
 	},
 })
 

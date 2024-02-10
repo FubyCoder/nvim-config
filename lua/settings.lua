@@ -23,6 +23,12 @@ vim.opt.scrolloff = 10
 -- Highlight current line
 vim.opt.cursorline = true
 
+-- Folding config
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevelstart = 99
+vim.opt.foldcolumn = "1"
+
+
 -- Highlight text on yank (copy)
 vim.api.nvim_create_autocmd('TextYankPost', {
 	group = vim.api.nvim_create_augroup('highlight_yank', {}),

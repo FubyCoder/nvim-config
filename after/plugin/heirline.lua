@@ -129,25 +129,25 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	group = "Heirline",
 })
 
+if not vim.g.vscode then
+	require("heirline").setup({
+		winbar = WinBars,
+		opts = {
+			disable_winbar_cb = function(args)
+				--- @type string
+				local buffer_name = vim.api.nvim_buf_get_name(args.buf)
+
+				-- Disable winbar on harpoon popup menu
+				if string.find(buffer_name, "harpoon-menu", 1, true) ~= nil then
+					return true
+				end
 
 
-require("heirline").setup({
-	winbar = WinBars,
-	opts = {
-		disable_winbar_cb = function(args)
-			--- @type string
-			local buffer_name = vim.api.nvim_buf_get_name(args.buf)
-
-			-- Disable winbar on harpoon popup menu
-			if string.find(buffer_name, "harpoon-menu", 1, true) ~= nil then
-				return true
-			end
-
-
-			return conditions.buffer_matches({
-				buftype = { "nofile", "prompt", "help", "quickfix" },
-				filetype = { "^git.*", "fugitive", "Trouble", "dashboard" },
-			}, args.buf)
-		end,
-	},
-})
+				return conditions.buffer_matches({
+					buftype = { "nofile", "prompt", "help", "quickfix" },
+					filetype = { "^git.*", "fugitive", "Trouble", "dashboard" },
+				}, args.buf)
+			end,
+		},
+	})
+end

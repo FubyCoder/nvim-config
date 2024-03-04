@@ -4,52 +4,54 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 
-require("nvim-tree").setup({
-	sync_root_with_cwd = true,
-	respect_buf_cwd = true,
-	disable_netrw = true,
-	view = {
-		width = 40,
-	},
-	renderer = {
-		root_folder_label = false,
+if not vim.g.vscode then
+	require("nvim-tree").setup({
+		sync_root_with_cwd = true,
+		respect_buf_cwd = true,
+		disable_netrw = true,
+		view = {
+			width = 40,
+		},
+		renderer = {
+			root_folder_label = false,
 
-		indent_markers = {
-			enable = true,
-			inline_arrows = true,
+			indent_markers = {
+				enable = true,
+				inline_arrows = true,
+				icons = {
+					corner = "└",
+					edge = "│",
+					item = "│",
+					bottom = "─",
+					none = " ",
+				},
+			},
 			icons = {
-				corner = "└",
-				edge = "│",
-				item = "│",
-				bottom = "─",
-				none = " ",
+				web_devicons = {
+					file = {
+						enable = true,
+						color = true,
+					},
+					folder = {
+						enable = false,
+						color = true,
+					},
+				},
+				git_placement = "before",
 			},
 		},
-		icons = {
-			web_devicons = {
-				file = {
-					enable = true,
-					color = true,
-				},
-				folder = {
-					enable = false,
-					color = true,
-				},
-			},
-			git_placement = "before",
+
+		git = {
+			ignore = false
 		},
-	},
 
-	git = {
-		ignore = false
-	},
+		filters = {
+			dotfiles = false,
+			custom = { ".git$" }
+		},
+	})
 
-	filters = {
-		dotfiles = false,
-		custom = { ".git$" }
-	},
-})
+	local api = require('nvim-tree.api')
 
-local api = require('nvim-tree.api')
-
-vim.keymap.set('n', '<C-b>', api.tree.toggle, {})
+	vim.keymap.set('n', '<C-b>', api.tree.toggle, {})
+end

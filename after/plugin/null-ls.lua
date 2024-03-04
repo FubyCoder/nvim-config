@@ -8,4 +8,6 @@ local sources = {
 }
 
 
-null_ls.setup({ sources = sources })
+if not vim.g.vscode then
+	null_ls.setup({ sources = sources })
+end

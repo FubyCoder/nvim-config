@@ -27,4 +27,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 
-lsp.setup()
+if not vim.g.vscode then
+	lsp.setup()
+end

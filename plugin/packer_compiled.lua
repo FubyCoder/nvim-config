@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/fuby/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/fuby/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/fuby/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -93,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fuby/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["heirline.nvim"] = {
+    loaded = true,
+    path = "/home/fuby/.local/share/nvim/site/pack/packer/start/heirline.nvim",
+    url = "https://github.com/rebelot/heirline.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -173,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fuby/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/fuby/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   }
 }
 
